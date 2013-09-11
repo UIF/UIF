@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA2073EF-5F95-43BB-9CD5-6B54355D098C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>UIF</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UIF</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>UIFAdmin2.aspx</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <IncludeIisSettings>true</IncludeIisSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Web.Administration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\System32\inetsrv\Microsoft.Web.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\AcademicsProgramSectionMaintenance.aspx.cs">
+      <DependentUpon>AcademicsProgramSectionMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\AcademicsProgramSectionMaintenance.aspx.designer.cs">
+      <DependentUpon>AcademicsProgramSectionMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\AcademyClassEnrollment.aspx.cs">
+      <DependentUpon>AcademyClassEnrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\AcademyClassEnrollment.aspx.designer.cs">
+      <DependentUpon>AcademyClassEnrollment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\AddEditRemoveChurchs.aspx.cs">
+      <DependentUpon>AddEditRemoveChurchs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\AddEditRemoveChurchs.aspx.designer.cs">
+      <DependentUpon>AddEditRemoveChurchs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\AddEditRemoveSchools.aspx.cs">
+      <DependentUpon>AddEditRemoveSchools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\AddEditRemoveSchools.aspx.designer.cs">
+      <DependentUpon>AddEditRemoveSchools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\AdminFunctions.aspx.cs">
+      <DependentUpon>AdminFunctions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\AdminFunctions.aspx.designer.cs">
+      <DependentUpon>AdminFunctions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\AthleticsAttendanceHistory.aspx.cs">
+      <DependentUpon>AthleticsAttendanceHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\AthleticsAttendanceHistory.aspx.designer.cs">
+      <DependentUpon>AthleticsAttendanceHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\AthleticsProgramMaintenance.aspx.cs">
+      <DependentUpon>AthleticsProgramMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\AthleticsProgramMaintenance.aspx.designer.cs">
+      <DependentUpon>AthleticsProgramMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\AthleticsProgramSectionMaintenance.aspx.cs">
+      <DependentUpon>AthleticsProgramSectionMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\AthleticsProgramSectionMaintenance.aspx.designer.cs">
+      <DependentUpon>AthleticsProgramSectionMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\AthleticsVolunteerMaintenance.aspx.cs">
+      <DependentUpon>AthleticsVolunteerMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\AthleticsVolunteerMaintenance.aspx.designer.cs">
+      <DependentUpon>AthleticsVolunteerMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\AttendanceHistoryInformation.aspx.cs">
+      <DependentUpon>AttendanceHistoryInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\AttendanceHistoryInformation.aspx.designer.cs">
+      <DependentUpon>AttendanceHistoryInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\ChildrensChoir.aspx.cs">
+      <DependentUpon>ChildrensChoir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\ChildrensChoir.aspx.designer.cs">
+      <DependentUpon>ChildrensChoir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\CoreKidsDetail.aspx.cs">
+      <DependentUpon>CoreKidsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\CoreKidsDetail.aspx.designer.cs">
+      <DependentUpon>CoreKidsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\CoreKidsProgram.aspx.cs">
+      <DependentUpon>CoreKidsProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\CoreKidsProgram.aspx.designer.cs">
+      <DependentUpon>CoreKidsProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\DiscipleshipMentorProgram.aspx.cs">
+      <DependentUpon>DiscipleshipMentorProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\DiscipleshipMentorProgram.aspx.designer.cs">
+      <DependentUpon>DiscipleshipMentorProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\EducationAssessments.aspx.cs">
+      <DependentUpon>EducationAssessments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\EducationAssessments.aspx.designer.cs">
+      <DependentUpon>EducationAssessments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\EducationProgramSectionMaintenance.aspx.cs">
+      <DependentUpon>EducationProgramSectionMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\EducationProgramSectionMaintenance.aspx.designer.cs">
+      <DependentUpon>EducationProgramSectionMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\ErrorAccess.aspx.cs">
+      <DependentUpon>ErrorAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\ErrorAccess.aspx.designer.cs">
+      <DependentUpon>ErrorAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\HistoricalReports.aspx.cs">
+      <DependentUpon>HistoricalReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\HistoricalReports.aspx.designer.cs">
+      <DependentUpon>HistoricalReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\ImpactUrbanSchools.aspx.cs">
+      <DependentUpon>ImpactUrbanSchools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\ImpactUrbanSchools.aspx.designer.cs">
+      <DependentUpon>ImpactUrbanSchools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\KRA.aspx.cs">
+      <DependentUpon>KRA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\KRA.aspx.designer.cs">
+      <DependentUpon>KRA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\MailingLists.aspx.cs">
+      <DependentUpon>MailingLists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\MailingLists.aspx.designer.cs">
+      <DependentUpon>MailingLists.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\MainMenu.aspx.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\MainMenu.aspx.designer.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\MenuTest.aspx.cs">
+      <DependentUpon>MenuTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\MenuTest.aspx.designer.cs">
+      <DependentUpon>MenuTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\MSHSChoir.aspx.cs">
+      <DependentUpon>MSHSChoir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\MSHSChoir.aspx.designer.cs">
+      <DependentUpon>MSHSChoir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\Options.aspx.cs">
+      <DependentUpon>Options.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\Options.aspx.designer.cs">
+      <DependentUpon>Options.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\PAA_StudentInformation_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PAA_StudentInformation_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\PerformingArts.aspx.cs">
+      <DependentUpon>PerformingArts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\PerformingArts.aspx.designer.cs">
+      <DependentUpon>PerformingArts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\PerformingArtsAcademy.aspx.cs">
+      <DependentUpon>PerformingArtsAcademy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\PerformingArtsAcademy.aspx.designer.cs">
+      <DependentUpon>PerformingArtsAcademy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\PerformingArtsClasses.aspx.cs">
+      <DependentUpon>PerformingArtsClasses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\PerformingArtsClasses.aspx.designer.cs">
+      <DependentUpon>PerformingArtsClasses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\PerformingArtsProgramSectionMaintenance.aspx.cs">
+      <DependentUpon>PerformingArtsProgramSectionMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\PerformingArtsProgramSectionMaintenance.aspx.designer.cs">
+      <DependentUpon>PerformingArtsProgramSectionMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\ProgramClassLists.aspx.cs">
+      <DependentUpon>ProgramClassLists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\ProgramClassLists.aspx.designer.cs">
+      <DependentUpon>ProgramClassLists.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\RegistrationForm.aspx.cs">
+      <DependentUpon>RegistrationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\RegistrationForm.aspx.designer.cs">
+      <DependentUpon>RegistrationForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\RegistrationFormAdmin.aspx.cs">
+      <DependentUpon>RegistrationFormAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\RegistrationFormAdmin.aspx.designer.cs">
+      <DependentUpon>RegistrationFormAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\Reporting.aspx.cs">
+      <DependentUpon>Reporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\Reporting.aspx.designer.cs">
+      <DependentUpon>Reporting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\RSVPGospelTracking.aspx.cs">
+      <DependentUpon>RSVPGospelTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\RSVPGospelTracking.aspx.designer.cs">
+      <DependentUpon>RSVPGospelTracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\Shakes.aspx.cs">
+      <DependentUpon>Shakes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\Shakes.aspx.designer.cs">
+      <DependentUpon>Shakes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\Singers.aspx.cs">
+      <DependentUpon>Singers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\Singers.aspx.designer.cs">
+      <DependentUpon>Singers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\SingleStudentAttendance.aspx.cs">
+      <DependentUpon>SingleStudentAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\SingleStudentAttendance.aspx.designer.cs">
+      <DependentUpon>SingleStudentAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\SoundEquipment.aspx.cs">
+      <DependentUpon>SoundEquipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\SoundEquipment.aspx.designer.cs">
+      <DependentUpon>SoundEquipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\StaffAdmin.aspx.cs">
+      <DependentUpon>StaffAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\StaffAdmin.aspx.designer.cs">
+      <DependentUpon>StaffAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\StudentAttendance.aspx.cs">
+      <DependentUpon>StudentAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\StudentAttendance.aspx.designer.cs">
+      <DependentUpon>StudentAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\StudentAttendanceOptions.aspx.cs">
+      <DependentUpon>StudentAttendanceOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\StudentAttendanceOptions.aspx.designer.cs">
+      <DependentUpon>StudentAttendanceOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\StudentAttendanceReporting.aspx.cs">
+      <DependentUpon>StudentAttendanceReporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\StudentAttendanceReporting.aspx.designer.cs">
+      <DependentUpon>StudentAttendanceReporting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\StudentPictures.aspx.cs">
+      <DependentUpon>StudentPictures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\StudentPictures.aspx.designer.cs">
+      <DependentUpon>StudentPictures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\SummerDayCamp.aspx.cs">
+      <DependentUpon>SummerDayCamp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\SummerDayCamp.aspx.designer.cs">
+      <DependentUpon>SummerDayCamp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\SystemEnhancementsBulletin.aspx.cs">
+      <DependentUpon>SystemEnhancementsBulletin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\SystemEnhancementsBulletin.aspx.designer.cs">
+      <DependentUpon>SystemEnhancementsBulletin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\UIFAdmin2.aspx.cs">
+      <DependentUpon>UIFAdmin2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\UIFAdmin2.aspx.designer.cs">
+      <DependentUpon>UIFAdmin2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\ViewStudentAttendance.aspx.cs">
+      <DependentUpon>ViewStudentAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\ViewStudentAttendance.aspx.designer.cs">
+      <DependentUpon>ViewStudentAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\ViewVolunteerAttendance.aspx.cs">
+      <DependentUpon>ViewVolunteerAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\ViewVolunteerAttendance.aspx.designer.cs">
+      <DependentUpon>ViewVolunteerAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerAdmin.aspx.cs">
+      <DependentUpon>VolunteerAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerAdmin.aspx.designer.cs">
+      <DependentUpon>VolunteerAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerAttendance.aspx.cs">
+      <DependentUpon>VolunteerAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerAttendance.aspx.designer.cs">
+      <DependentUpon>VolunteerAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerAttendanceHistory.aspx.cs">
+      <DependentUpon>VolunteerAttendanceHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerAttendanceHistory.aspx.designer.cs">
+      <DependentUpon>VolunteerAttendanceHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerDetails.aspx.cs">
+      <DependentUpon>VolunteerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerDetails.aspx.designer.cs">
+      <DependentUpon>VolunteerDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerInformation.aspx.cs">
+      <DependentUpon>VolunteerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerInformation.aspx.designer.cs">
+      <DependentUpon>VolunteerInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerProgramMaintenance.aspx.cs">
+      <DependentUpon>VolunteerProgramMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerProgramMaintenance.aspx.designer.cs">
+      <DependentUpon>VolunteerProgramMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\Volunteers.aspx.cs">
+      <DependentUpon>Volunteers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\Volunteers.aspx.designer.cs">
+      <DependentUpon>Volunteers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerSearchQueries.aspx.cs">
+      <DependentUpon>VolunteerSearchQueries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\VolunteerSearchQueries.aspx.designer.cs">
+      <DependentUpon>VolunteerSearchQueries.aspx</DependentUpon>
+    </Compile>
+    <Content Include="Global.asax">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="PerformingArts\AcademicsProgramSectionMaintenance.aspx" />
+    <Content Include="PerformingArts\AcademyClassEnrollment.aspx" />
+    <Content Include="PerformingArts\AddEditRemoveChurchs.aspx" />
+    <Content Include="PerformingArts\AddEditRemoveSchools.aspx" />
+    <Content Include="PerformingArts\AdminFunctions.aspx" />
+    <Content Include="PerformingArts\AthleticsAttendanceHistory.aspx" />
+    <Content Include="PerformingArts\AthleticsProgramMaintenance.aspx" />
+    <Content Include="PerformingArts\AthleticsProgramSectionMaintenance.aspx" />
+    <Content Include="PerformingArts\AthleticsVolunteerMaintenance.aspx" />
+    <Content Include="PerformingArts\AttendanceHistoryInformation.aspx" />
+    <Content Include="PerformingArts\ChildrensChoir.aspx" />
+    <Content Include="PerformingArts\CoreKidsDetail.aspx" />
+    <Content Include="PerformingArts\CoreKidsProgram.aspx" />
+    <Content Include="PerformingArts\DiscipleshipMentorProgram.aspx" />
+    <Content Include="PerformingArts\EducationAssessments.aspx" />
+    <Content Include="PerformingArts\EducationProgramSectionMaintenance.aspx" />
+    <Content Include="PerformingArts\ErrorAccess.aspx" />
+    <Content Include="PerformingArts\HistoricalReports.aspx" />
+    <Content Include="PerformingArts\ImpactUrbanSchools.aspx" />
+    <Content Include="PerformingArts\KRA.aspx" />
+    <Content Include="PerformingArts\MailingLists.aspx" />
+    <Content Include="PerformingArts\Main.aspx" />
+    <Content Include="PerformingArts\MainMenu.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="PerformingArts\MenuTest.aspx" />
+    <Content Include="PerformingArts\MSHSChoir.aspx" />
+    <Content Include="PerformingArts\Options.aspx" />
+    <Content Include="PerformingArts\PerformingArts.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="PerformingArts\PerformingArtsAcademy.aspx" />
+    <Content Include="PerformingArts\PerformingArtsClasses.aspx" />
+    <Content Include="PerformingArts\PerformingArtsProgramSectionMaintenance.aspx" />
+    <Content Include="PerformingArts\ProgramClassLists.aspx" />
+    <Content Include="PerformingArts\RegistrationForm.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="PerformingArts\RegistrationFormAdmin.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="PerformingArts\Reporting.aspx" />
+    <Content Include="PerformingArts\RSVPGospelTracking.aspx" />
+    <Content Include="PerformingArts\Shakes.aspx" />
+    <Content Include="PerformingArts\Singers.aspx" />
+    <Content Include="PerformingArts\SingleStudentAttendance.aspx" />
+    <Content Include="PerformingArts\SoundEquipment.aspx" />
+    <Content Include="PerformingArts\StaffAdmin.aspx" />
+    <Content Include="PerformingArts\StudentAttendance.aspx" />
+    <Content Include="PerformingArts\StudentAttendanceOptions.aspx" />
+    <Content Include="PerformingArts\StudentAttendanceReporting.aspx" />
+    <Content Include="PerformingArts\StudentPictures.aspx" />
+    <Content Include="PerformingArts\SummerDayCamp.aspx" />
+    <Content Include="PerformingArts\SystemEnhancementsBulletin.aspx" />
+    <Content Include="PerformingArts\UIFAdmin2.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="PerformingArts\ViewStudentAttendance.aspx" />
+    <Content Include="PerformingArts\ViewVolunteerAttendance.aspx" />
+    <Content Include="PerformingArts\VolunteerAdmin.aspx" />
+    <Content Include="PerformingArts\VolunteerAttendance.aspx" />
+    <Content Include="PerformingArts\VolunteerAttendanceHistory.aspx" />
+    <Content Include="PerformingArts\VolunteerDetails.aspx" />
+    <Content Include="PerformingArts\VolunteerInformation.aspx" />
+    <Content Include="PerformingArts\VolunteerProgramMaintenance.aspx" />
+    <Content Include="PerformingArts\Volunteers.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <None Include="PerformingArts\VolunteerSearchQueries.aspx" />
+    <Content Include="Web.config" />
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformingArts\MainMenu.aspx.resx">
+      <DependentUpon>MainMenu.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformingArts\PerformingArts.aspx.resx">
+      <DependentUpon>PerformingArts.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformingArts\RegistrationForm.aspx.resx">
+      <DependentUpon>RegistrationForm.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformingArts\RegistrationFormAdmin.aspx.resx">
+      <DependentUpon>RegistrationFormAdmin.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformingArts\Try1Report.rdlc" />
+    <EmbeddedResource Include="PerformingArts\UIFAdmin2.aspx.resx">
+      <DependentUpon>UIFAdmin2.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformingArts\Volunteers.aspx.resx">
+      <DependentUpon>Volunteers.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UrbanImpact\UrbanImpact\UrbanImpact\UrbanImpactCommon.csproj">
+      <Project>{AABDE780-14B5-4B02-B97A-7A2124702C3B}</Project>
+      <Name>UrbanImpactCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PerformingArts\PAA_StudentInformation_DS.xsc">
+      <DependentUpon>PAA_StudentInformation_DS.xsd</DependentUpon>
+    </None>
+    <None Include="PerformingArts\PAA_StudentInformation_DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PAA_StudentInformation_DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PerformingArts\PAA_StudentInformation_DS.xss">
+      <DependentUpon>PAA_StudentInformation_DS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49790</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/UIF</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
