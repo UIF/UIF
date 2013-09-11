@@ -580,6 +580,9 @@
       <SubType>Form</SubType>
     </Content>
     <None Include="PerformingArts\VolunteerSearchQueries.aspx" />
+    <Content Include="Script\jquery-2.0.3.js" />
+    <Content Include="Script\jquery-ui.js" />
+    <Content Include="style\jquery-ui.css" />
     <Content Include="Web.config" />
     <EmbeddedResource Include="Global.asax.resx">
       <DependentUpon>Global.asax.cs</DependentUpon>

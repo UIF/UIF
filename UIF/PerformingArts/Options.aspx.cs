@@ -2230,6 +2230,7 @@ namespace UIF.PerformingArts
             chbCollegeVisitDate.Attributes.Add("onclick", "return false;");
 
             chbCollegeSATDate.Visible = true;
+            chbCollegeSATDate.Enabled = true;
             chbCollegeACTDate.Visible = true;
 
             txbCollegeApplicationDate.Visible = true;
@@ -3668,6 +3669,7 @@ namespace UIF.PerformingArts
 
 
             chbCollegeSATDate.Visible = false;
+            chbCollegeSATDate.Enabled = false;
             chbCollegeACTDate.Visible = false;
             txbCollegeApplicationDate.Visible = false;
             txbCollegeHealthInsuranceDate.Visible = false;

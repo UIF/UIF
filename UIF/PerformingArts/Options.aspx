@@ -6,21 +6,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
+    <link rel="Stylesheet" href="../style/jquery-ui.css" />
+    <script type="text/javascript" src="../Script/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../Script/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#chbCollegeSATDate").datepicker({
+                onSelect: function (dateText, inst) {
+                    $("#chbCollegeSAT").prop('checked', true);
 
-<style type="text/css"> 
-   div { z-index: 1;
-        left: 446px;
-        top: 209px;
-        position: absolute;
-        height: 335px;
-        width: 823px;
-        margin-left: 40px;
-    } 
-</style>
+                }
+            });
 
-<style type="text/css"> 
-   div { z-index: 9999; } 
-</style>
+        });
+    
+    </script>
 
 
 </head>
@@ -162,7 +162,7 @@
         
         
         
-        style="z-index: 1; left: -453px; top: 360px; position: absolute; height: 147px; width: 1022px">
+        style="z-index: 1; left: 20px; top: 580px; position: absolute; height: 147px; width: 1022px">
     </asp:GridView>
     <asp:LinkButton ID="lbAddNewEntry" runat="server" Font-Size="10pt" 
         ForeColor="Black" onclick="lbAddNewEntry_Click" 
@@ -941,6 +941,6 @@
     <asp:Label ID="lblReports" runat="server" Font-Bold="False" 
         style="z-index: 1; left: 308px; top: 497px; position: absolute; width: 142px" 
         Text="Option Reports" Visible="False"></asp:Label>
-    </form>
+    </form>    
 </body>
 </html>
