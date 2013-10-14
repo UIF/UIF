@@ -15,7 +15,7 @@ namespace UrbanImpactCommon
        //////public static string UIF_Server_Athletics_connectionString = "Data Source=UIF-Server;Initial Catalog=UIF_Athletics;User Id=athle;Password=Ath4let1C!;";
 
 
-       public static string UIF_Server_connectionString = "Data Source=PGH187DEVPIT03;Initial Catalog=UIF;User Id=gjanco;Password=password123%;";
+       public static string UIF_Server_connectionString = "Data Source=PGH187DEVPIT03;Initial Catalog=UIF_PerformingArts;User Id=gjanco;Password=password123%;";
        public static string UIF_Server_Athletics_connectionString = "Data Source=UIF-Server;Initial Catalog=UIF_Athletics;User Id=athle;Password=Ath4let1C!;";
 
 

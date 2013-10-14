@@ -74,7 +74,7 @@ namespace UIF.PerformingArts
                                             + ", pl.[3on3basketball], pl.basketballTEAMS, pl.soccerintramurals, pl.soccerteams, pl.baseball, pl.biblestudy, pl.hsbasketballlg, pl.msbasketballlg, pl.outreachbasketball, pl.outreachbasketball "
                                             + ",si.MiddleName, si.MailingListInclude, si.MailingListCodes, pl.summerdaycamp, si.promotionalrelease, si.permissiontotransport, si.campdropoff, si.camppickup, si.campcomments, si.includepromotionalmailing, si.textphone, pl.SpecialEvents, si.studentvolunteer "
                                             + ",pl.impacturbanschools, sm.AdministerYesNo, sm.Aspirin, sm.Tylenol, sm.Ibuprofen, sm.Advil, sm.Antacids, sm.Benadryl, sm.[Antiseptic Ointment], sm.[Anesthetic Ointment], sm.IodinePrepPad, sm.Acetaminophen, sm.RubbingAlcohol, sm.Other, sm.OtherNotes "
-                                            + ",si.Scrubbed, si.ScrubbedDate, si.LastScrubbedBy, pl.academicreadingsupport "
+                                            + ",si.Scrubbed, si.ScrubbedDate, si.LastScrubbedBy, pl.academicreadingsupport, si.StudentId "
                                             + "FROM UIF_PerformingArts.dbo.studentinformation  si "
                                             + "LEFT OUTER JOIN dbo.programslist pl "
                                             + "ON (si.LastName = pl.LastName AND si.FirstName = pl.FirstName AND si.MiddleName = pl.MiddleName) "
@@ -99,7 +99,7 @@ namespace UIF.PerformingArts
                                             + ", pl.[3on3basketball], pl.basketballTEAMS, pl.soccerintramurals, pl.soccerteams, pl.baseball, pl.biblestudy, pl.hsbasketballlg, pl.msbasketballlg, pl.outreachbasketball, pl.outreachbasketball "
                                             + ",si.MiddleName, si.MailingListInclude, si.MailingListCodes, pl.summerdaycamp, si.promotionalrelease, si.permissiontotransport, si.campdropoff, si.camppickup, si.campcomments, si.includepromotionalmailing, si.textphone, pl.SpecialEvents, si.studentvolunteer "
                                             + ",pl.impacturbanschools, sm.AdministerYesNo, sm.Aspirin, sm.Tylenol, sm.Ibuprofen, sm.Advil, sm.Antacids, sm.Benadryl, sm.[Antiseptic Ointment], sm.[Anesthetic Ointment], sm.IodinePrepPad, sm.Acetaminophen, sm.RubbingAlcohol, sm.Other, sm.OtherNotes "
-                                            +  ",si.Scrubbed, si.ScrubbedDate, si.LastScrubbedBy "
+                                            + ",si.Scrubbed, si.ScrubbedDate, si.LastScrubbedBy, pl.academicreadingsupport, si.StudentId "
                                             + "FROM UIF_PerformingArts.dbo.studentinformation  si "
                                             + "LEFT OUTER JOIN dbo.programslist pl "
                                             + "ON (si.LastName = pl.LastName AND si.FirstName = pl.FirstName AND si.MiddleName = pl.MiddleName) "
@@ -901,6 +901,14 @@ namespace UIF.PerformingArts
                                 else
                                 {
                                     chbReadingSupport.Checked = reader.GetBoolean(85);
+                                }
+                                if (reader.IsDBNull(86))
+                                {
+                                    hdnStudentId.Value = "N/A";
+                                }
+                                else
+                                {
+                                    hdnStudentId.Value = Convert.ToString(reader.GetInt32(86));
                                 }
                                 //chbPaid.Checked = reader.GetBoolean(34);
                                 //ddlTextPhone.Items.Add("Yes");
@@ -10007,7 +10015,8 @@ namespace UIF.PerformingArts
                                                     + "'Comments' , "
                                                     + "'" + System.DateTime.Now.ToString() + "', "
                                                     + "'" + System.DateTime.Now.ToString() + "', "
-                                                    + "'" + Request.QueryString["lastname"] + "," + Request.QueryString["firstname"] + "') ";
+                                                    + "'" + Request.QueryString["lastname"] + "," + Request.QueryString["firstname"] + "', "
+                                                    + hdnStudentId.Value + ")";
 
 
                     //sql_Insert = "INSERT into OptionsProgram "

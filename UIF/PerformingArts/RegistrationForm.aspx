@@ -2177,6 +2177,7 @@
                     
                     
                     style="z-index: 1; left: 511px; top: 1374px; position: absolute; width: 210px"></asp:TextBox>
+                    <asp:HiddenField ID="hdnStudentId" runat="server" />
             </p>
         </form>
 	</body>
