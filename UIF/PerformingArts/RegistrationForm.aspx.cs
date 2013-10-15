@@ -9994,29 +9994,8 @@ namespace UIF.PerformingArts
                 {
                     string sql_Insert = "";
 
-                    sql_Insert = "INSERT into OptionsProgramNEW "
-                                                    + "values ("
-                                                    + "'" + txtLastName.Text.Trim() + "', "
-                                                    + "'" + txtFirstName.Text.Trim() + "', "
-                                                    + "'" + txbMiddleName.Text.Trim() + "', "
-                                                    + "'Select a Bus', "
-                                                    + "0, "
-                                                    + "0, "
-                                                    + "0, "
-                                                    + "0, "
-                                                    + "0, "
-                                                    + "0, "
-                                                    + "'GPA', "
-                                                    + "'01-01-1990', "//CHANGE THIS DEFAULT.
-                                                    + "0, "
-                                                    + "'01-01-2011', "//CHANGE THIS DEFAULT.
-                                                    + "0, "
-                                                    + "'01-01-2011', "//CHANGE THIS DEFAULT.
-                                                    + "'Comments' , "
-                                                    + "'" + System.DateTime.Now.ToString() + "', "
-                                                    + "'" + System.DateTime.Now.ToString() + "', "
-                                                    + "'" + Request.QueryString["lastname"] + "," + Request.QueryString["firstname"] + "', "
-                                                    + hdnStudentId.Value + ")";
+                    sql_Insert = "INSERT into OptionsProgramNEW (StudentId)"
+                                                    + "values (" + hdnStudentId.Value + ")";
 
 
                     //sql_Insert = "INSERT into OptionsProgram "
