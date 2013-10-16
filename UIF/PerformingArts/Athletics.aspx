@@ -1,5 +1,6 @@
-<%@ Page language="c#" Codebehind="PerformingArts.aspx.cs" AutoEventWireup="True" Inherits="UIF.PerformingArts.PerformingArts" enableViewStateMac="True"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Athletics.aspx.cs" Inherits="UIF.PerformingArts.Athletics" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
@@ -79,14 +80,13 @@
 
     <asp:panel ID="pnl1" runat="server" 
         style="z-index: 1; left: 53px; top: 226px; position: absolute; height: 114px; width: 329px">
-            <h2>Performing Arts</h2>
+            <h2>Athletics</h2>
     <ul>
-        <li><a href="MSHSChoir.aspx?Security=Good&lastname=<%: Request.QueryString["lastname"] %>&firstname=<%: Request.QueryString["firstname"] %>&Dept=<%: Request.QueryString["Dept"] %>">MSHS Choir</a></li>
-        <li><a href="ChildrensChoir.aspx?Security=Good&lastname=<%: Request.QueryString["lastname"] %>&firstname=<%: Request.QueryString["firstname"] %>&Dept=<%: Request.QueryString["Dept"] %>">Childrens Choir</a></li>
-        <li><a href="PerformingArtsAcademy.aspx?Security=Good&lastname=<%: Request.QueryString["lastname"] %>&firstname=<%: Request.QueryString["firstname"] %>&Dept=<%: Request.QueryString["Dept"] %>">Performing Arts Acadamy</a></li>
-       <li><a href="Shakes.aspx?Security=Good&lastname=<%: Request.QueryString["lastname"] %>firstname=<%: Request.QueryString["firstname"] %>&Dept=" + <%: Request.QueryString["Dept"] %>">Shakes</a></li>
-       <li><a href="Singers.aspx?Security=Good&lastname=<%: Request.QueryString["lastname"] %>&firstname=<%: Request.QueryString["firstname"] %>&Dept=" + <%: Request.QueryString["Dept"] %>">Singers</a></li>
-       <li><a href="PerformingArtsProgramSectionMaintenance.aspx?Security=Good&lastname=<%: Request.QueryString["lastname"] %>&firstname=<%: Request.QueryString["firstname"] %>&Dept=" + <%: Request.QueryString["Dept"] %>">Program Admin Maintenance</a></li>
+        <li><a href="AthleticsProgramMaintenance.aspx?Security=Good&lastname=<%: Request.QueryString["lastname"] %>&firstname=<%: Request.QueryString["firstname"] %>&Dept=<%: Request.QueryString["Dept"] %>">Student Program Maintenance</a></li>
+        <li><a href="AthleticsVolunteerMaintenance.aspx?Security=Good&lastname=<%: Request.QueryString["lastname"] %>&firstname=<%: Request.QueryString["firstname"] %>&Dept=<%: Request.QueryString["Dept"] %>">Volunteer Program Maintenance</a></li>
+         <li><a href="AthleticsAttendanceHistory.aspx?Security=Good&lastname=<%: Request.QueryString["lastname"] %>firstname=<%: Request.QueryString["firstname"] %>&Dept=" + <%: Request.QueryString["Dept"] %>">Student Attendance History</a></li>
+       <li><a href="VolunteerAttendanceHistory.aspx?Security=Good&lastname=<%: Request.QueryString["lastname"] %>&firstname=<%: Request.QueryString["firstname"] %>&Dept=" + <%: Request.QueryString["Dept"] %>">Volunteer Attendance History</a></li>
+       <li><a href="AthleticsProgramSectionMaintenance.aspx?Security=Good&lastname=<%: Request.QueryString["lastname"] %>&firstname=<%: Request.QueryString["firstname"] %>&Dept=" + <%: Request.QueryString["Dept"] %>">Athletics Program Maintenance</a></li>
     </ul>
     </asp:panel>
 

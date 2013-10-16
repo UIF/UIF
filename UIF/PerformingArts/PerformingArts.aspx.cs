@@ -23,31 +23,10 @@ namespace UIF.PerformingArts
         public SqlConnection con = new SqlConnection(connectionString);        
 
         protected void Page_Load(object sender, System.EventArgs e)
-		{
-			// Put user code to initialize the page here
-            if (!Page.IsPostBack)
-            {
-                if (Request.QueryString["security"] == "Good")
-                {
-                    if (Request.QueryString["lastname"] == "Anderson" && Request.QueryString["firstname"] == "Eric")
-                    {
-
-
-                    }
-                    else
-                    {
-
-
-                    }
-                }
-                else
-                {
-                    //Ryan C Manners..1/5/11
-                    //Do NOT ALLOW ACCESS TO THE PAGE!
-
-                    Response.Redirect("ErrorAccess.aspx");
-                }
-            }
+        {
+            UrbanImpactCommon.HTML BuildMenu = new UrbanImpactCommon.HTML();
+            MenuBest = BuildMenu.BuildMenuControl(MenuBest);
+            
         }
 
 		#region Web Form Designer generated code
@@ -74,7 +53,12 @@ namespace UIF.PerformingArts
         {
              //+ "&Dept=" + Request.QueryString["Dept"]
         }
-
+        protected void MenuBest_MenuItemClick(object sender, MenuEventArgs e)
+        {
+            UIFCommon menucontrol = new UIFCommon();
+            menucontrol.MenuControlBehavior(e, Request, Response);
+            //menucontrol.MenuControlBehavior(e, Request, Response, Request.QueryString["lastname"], Request.QueryString["firstname"]);
+        }
 
 	}
 }

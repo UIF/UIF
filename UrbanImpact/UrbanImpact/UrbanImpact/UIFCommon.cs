@@ -90,6 +90,7 @@ namespace UrbanImpactCommon
         //public void MenuControlBehavior(System.Web.UI.WebControls.MenuEventArgs e, System.Web.HttpRequest Request,System.Web.HttpResponse Response, string lastname, string firstname)
         public void MenuControlBehavior(System.Web.UI.WebControls.MenuEventArgs e, System.Web.HttpRequest Request,System.Web.HttpResponse Response)
         {
+            var newSiteBaseUrl = ConfigurationManager.AppSettings["NewSiteBaseUrl"];
             Boolean LimitAccess = false;
             Boolean fullaccess = false;
             Boolean partialaccess = false;
@@ -201,8 +202,7 @@ namespace UrbanImpactCommon
             }
             else if (e.Item.Text == "Options")
             {
-                Response.Clear();
-                Response.Redirect("Options.aspx?Security=Good&lastname=" + Request.QueryString["lastname"] + "&firstname=" + Request.QueryString["firstname"] + "&StudentLastName=&StudentFirstName=" + "&Dept=" + Request.QueryString["Dept"]);
+                Response.Redirect(newSiteBaseUrl + "Options");
             }
             else if (e.Item.Text == "KRA Reports")
             {
@@ -282,7 +282,7 @@ namespace UrbanImpactCommon
             }
             else if (e.Item.Text == "LogOut")
             {
-                Response.Redirect("MainMenu.aspx");
+                Response.Redirect(newSiteBaseUrl + "Account/Logout");
             }
         }
 

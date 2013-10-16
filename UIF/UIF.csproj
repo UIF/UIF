@@ -22,6 +22,7 @@
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -139,6 +140,13 @@
     <Compile Include="PerformingArts\AdminFunctions.aspx.designer.cs">
       <DependentUpon>AdminFunctions.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PerformingArts\Athletics.aspx.cs">
+      <DependentUpon>Athletics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\Athletics.aspx.designer.cs">
+      <DependentUpon>Athletics.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PerformingArts\AthleticsAttendanceHistory.aspx.cs">
       <DependentUpon>AthleticsAttendanceHistory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +209,13 @@
     </Compile>
     <Compile Include="PerformingArts\DiscipleshipMentorProgram.aspx.designer.cs">
       <DependentUpon>DiscipleshipMentorProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformingArts\Education.aspx.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformingArts\Education.aspx.designer.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
     </Compile>
     <Compile Include="PerformingArts\EducationAssessments.aspx.cs">
       <DependentUpon>EducationAssessments.aspx</DependentUpon>
@@ -516,6 +531,7 @@
     <Content Include="PerformingArts\AddEditRemoveChurchs.aspx" />
     <Content Include="PerformingArts\AddEditRemoveSchools.aspx" />
     <Content Include="PerformingArts\AdminFunctions.aspx" />
+    <Content Include="PerformingArts\Athletics.aspx" />
     <Content Include="PerformingArts\AthleticsAttendanceHistory.aspx" />
     <Content Include="PerformingArts\AthleticsProgramMaintenance.aspx" />
     <Content Include="PerformingArts\AthleticsProgramSectionMaintenance.aspx" />
@@ -525,6 +541,7 @@
     <Content Include="PerformingArts\CoreKidsDetail.aspx" />
     <Content Include="PerformingArts\CoreKidsProgram.aspx" />
     <Content Include="PerformingArts\DiscipleshipMentorProgram.aspx" />
+    <Content Include="PerformingArts\Education.aspx" />
     <Content Include="PerformingArts\EducationAssessments.aspx" />
     <Content Include="PerformingArts\EducationProgramSectionMaintenance.aspx" />
     <Content Include="PerformingArts\ErrorAccess.aspx" />

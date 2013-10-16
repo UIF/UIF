@@ -10,7 +10,7 @@
 namespace UIF.PerformingArts {
     
     
-    public partial class PerformingArts {
+    public partial class Education {
         
         /// <summary>
         /// Head1 control.

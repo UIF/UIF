@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using System.IO;
 using UrbanImpactCommon;
 using Microsoft.Web.Administration;
+using System.Configuration;
 
 namespace UIF.PerformingArts
 {
@@ -25,28 +26,7 @@ namespace UIF.PerformingArts
 
 		protected void Page_Load(object sender, System.EventArgs e)
 		{
-            if (!Page.IsPostBack)
-            {
-                //string ServerConnectionString = Request.ServerVariables["SERVER_NAME"];
-                // Put user code to initialize the page here
-                lgnUIFLogin.Enabled = true;
-                lgnUIFLogin.Visible = true;
-
-//                string CurrentName = "";
-
-                //using (ServerManager serverManager = new ServerManager())
-                //{
-                //    Configuration config = serverManager.GetApplicationHostConfiguration();
-
-                //    ConfigurationSection serverRuntimeSection = config.GetSection("system.webServer/serverRuntime", "Default Web Site");
-                //    serverRuntimeSection["enabled"] = true;
-                //    //serverRuntimeSection["frequentHitThreshold"] = 5;
-                //    //serverRuntimeSection["frequentHitTimePeriod"] = TimeSpan.Parse("00:00:20");
-                //    serverRuntimeSection["maxRequestEntityAllowed"] = "4294967295";
-                //    serverRuntimeSection["uploadReadAheadSize"] = "2000000";
-                //    serverManager.CommitChanges();
-                //}               
-            }
+            Response.Redirect(ConfigurationManager.AppSettings["NewSiteBaseUrl"] + "Account/Login");
         }
 
 		#region Web Form Designer generated code
