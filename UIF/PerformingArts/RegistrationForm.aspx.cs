@@ -9992,37 +9992,15 @@ namespace UIF.PerformingArts
                 //Insert into the Options Program table...RCM..2/29/12.
                 try
                 {
-                    string sql_Insert = "";
-
-                    sql_Insert = "INSERT into OptionsProgramNEW (StudentId)"
-                                                    + "values (" + hdnStudentId.Value + ")";
-
-
-                    //sql_Insert = "INSERT into OptionsProgram "
-                    //                                + "values ("
-                    //                                + "'" + txtLastName.Text.Trim() + "' , "
-                    //                                + "'" + txtFirstName.Text.Trim() + "' , "
-                    //                                + "'N/A' , "
-                    //                                + "0, "
-                    //                                + "0, "
-                    //                                + "'01-01-2011', "
-                    //                                + "0, "
-                    //                                + "'01-01-2011', "
-                    //                                + "'N/A' , "
-                    //                                + "'ProgramEnrollment' , "
-                    //                                + "0, "
-                    //                                + "'N/A' , "
-                    //                                + "'" + System.DateTime.Now.ToString() + "', "
-                    //                                + "'" + System.DateTime.Now.ToString() + "', "
-                    //                                + "'" + Request.QueryString["lastname"] + "," + Request.QueryString["firstname"] + "', "
-                    //                                + "'N/A', "
-                    //                                + "0, "
-                    //                                + "0, "
-                    //                                + "'" + txbMiddleName.Text.Trim() + "') ";
                     con.Open();
-
+                     
+                    var updatedby = Request.QueryString["lastname"] + "," + Request.QueryString["firstname"];
+                  
                     //create a SQL command to update record
-                    SqlCommand sqlInsertCommand = new SqlCommand(sql_Insert, con);
+                    SqlCommand sqlInsertCommand = new SqlCommand("AddStudentToOptions", con);
+                    sqlInsertCommand.CommandType = CommandType.StoredProcedure;
+                    sqlInsertCommand.Parameters.Add(new SqlParameter("@StudentId", Convert.ToInt32(hdnStudentId.Value)));
+                    sqlInsertCommand.Parameters.Add(new SqlParameter("@LastUpdatedBy", updatedby));
                     if (sqlInsertCommand.ExecuteNonQuery() > 0)
                     {
                         con.Close();
@@ -10039,35 +10017,6 @@ namespace UIF.PerformingArts
                         //	lblAlert.Text = "No update. Error has occurred.";
                     }
 
-                    string sql_InsertDescription = "";
-                    sql_InsertDescription = "INSERT into OptionsDescription "
-                                                    + "values ("
-                                                    + "'" + txtLastName.Text.Trim() + "' , "
-                                                    + "'" + txtFirstName.Text.Trim() + "' , "
-                                                    + "'Beginning Entry' , "
-                                                    + "'" + System.DateTime.Now.ToString() + "',"
-                                                    + "'" + System.DateTime.Now.ToString() + "',"
-                                                    + "'" + Request.QueryString["lastname"] + "," + Request.QueryString["firstname"] + "', "
-                                                    + "'" + txbMiddleName.Text.Trim() + "') ";
-                    SqlConnection con2 = new SqlConnection(connectionString);
-                    con2.Open();
-
-                    //create a SQL command to update record
-                    SqlCommand sqlInsertCommand2 = new SqlCommand(sql_InsertDescription, con2);
-                    if (sqlInsertCommand2.ExecuteNonQuery() > 0)
-                    {
-                        con2.Close();
-                        //UpdateStudentTable();
-                        //chbDiscipleshipMentor.Enabled = false;
-                        //lbDiscipleshipMentor.Enabled = true;
-                    }
-                    else
-                    {
-                        //display message that record was NOT updated
-                        //	btnContinue.Visible = false;
-                        //	lblAlert.Visible = true;
-                        //	lblAlert.Text = "No update. Error has occurred.";
-                    }
                     lbOptionsProgram.Enabled = true;
                 }
                 catch (Exception alskdjaa)
