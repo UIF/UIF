@@ -10011,6 +10011,7 @@ namespace UIF.PerformingArts
                     }
                     else
                     {
+                        // this is a test
                         //display message that record was NOT updated
                         //	btnContinue.Visible = false;
                         //	lblAlert.Visible = true;
